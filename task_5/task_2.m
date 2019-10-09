@@ -14,6 +14,11 @@ else
   
   while !feof(in)
     s1 = fgets(in);
+    
+    if (length(s1) < 1)
+      "File is empty"
+      return
+    endif
     s1_nums_length = length(strsplit(s1, " "));
     
     if (rows_quantity == 0)
@@ -33,9 +38,6 @@ else
     s = strcat(s, s1);
   end
   s
-  if (length(s) < 1)
-    "File is empty"
-  endif
   
   if (!correct_row_length)
     "Incorrect quantity of numbers in rows"
