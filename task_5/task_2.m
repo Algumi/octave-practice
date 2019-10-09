@@ -7,7 +7,6 @@ else
   
   rows_quantity = 0;
   correct_row_length = 0;
-  columns_quantity = 0;
   
   flag_correct_rows = true;
   flag_correct_chars = true;
@@ -24,7 +23,7 @@ else
     if (rows_quantity == 0)
       correct_row_length = s1_nums_length
     else
-      if (rows_quantity != s1_nums_length)
+      if (correct_row_length != s1_nums_length)
         flag_correct_rows = false;
       endif
     endif
@@ -39,14 +38,14 @@ else
   end
   s
   
-  if (!correct_row_length)
-    "Incorrect quantity of numbers in rows"
+  if (!flag_correct_rows)
+    "Incorrect quantity of elements in rows"
   else
     if (rows_quantity + 1 != correct_row_length)
       "Incorrect number of rows and columns"
     else
       if (!flag_correct_chars)
-        "incorrect chracters in matrix"
+        "incorrect characters in matrix"
       else
         matrix = str2num(s)
         A = matrix(1 : rows_quantity, 1 : rows_quantity)
