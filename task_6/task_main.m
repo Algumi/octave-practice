@@ -19,12 +19,12 @@ title('task 17');
 
 [x_3_b, fx0_3_b] = bisection_method(fx3, 0, 10, 0.00001)
 display("\n");
-[x_17_b, fx0_17_b] = bisection_method(fx17, -100, 100, 0.00001)
+[x_17_b, fx0_17_b] = bisection_method(fx17, 0.5, 4, 0.00001)
 
 display("\n");
 [x_3_c, fx0_3_c] = chord_method(fx3, 0, 10, 0.00001)
 display("\n");
-[x_17_c, fx0_17_c] = chord_method(fx17, 1, 10, 0.00001)
+[x_17_c, fx0_17_c] = chord_method(fx17, 0.5, 4, 0.00001)
 
 display("\n");
 [x, xval, info, out] = fzero(fx3, [0, 10])

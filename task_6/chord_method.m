@@ -24,7 +24,7 @@
 ## Created: 2019-10-13
 
 function [x0, fx0] = chord_method (fx, a, b, e)
-  if sign(fx(a)) == sign(fx(b))
+  if (fx(a) * fx(b) > 0)
     x0 = "no roots";
     fx0 = "no roots";
     return;

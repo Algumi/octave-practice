@@ -25,7 +25,7 @@
 
 
 function [x0, fx0] = bisection_method (fx, a, b, e)
-  if sign(fx(a)) == sign(fx(b))
+  if (fx(a) * fx(b) > 0)
     x0 = "no roots";
     fx0 = "no roots";
     return;
