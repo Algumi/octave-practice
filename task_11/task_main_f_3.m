@@ -39,6 +39,8 @@ plot(x, ans_f_3_2)
 title('runge kutta 3')
 
 [T, Y] = ode23(f_3, x, 1);
+T
+Y
 subplot(2, 2, 3)
 xlabel('x');
 ylabel('y');

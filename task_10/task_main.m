@@ -14,4 +14,4 @@ ctype ="LLLLUUU";
 vartype = "IIIIIIIIIIII";
 sense = 1;
 
-[x, f, errnum, extra] = glpk(C, A, B, [], [], ctype, vartype, sense)
+[x, f, errnum, extra] = glpk(C, A, B, [0,0,0,0,0,0,0,0,0,0,0,0], [], ctype, vartype, sense)
